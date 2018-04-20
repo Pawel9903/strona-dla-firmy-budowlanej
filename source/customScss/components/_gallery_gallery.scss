@@ -1,0 +1,28 @@
+.c-gallery{
+  margin: 20px auto;
+}
+
+.c-gallery-item {
+  width: 350px;
+  cursor: pointer;
+  padding: 10px 0;
+}
+
+.c-gallery-description{
+  text-align: center;
+  font-size: 1.2rem;
+  border-bottom: 1px solid black;
+  @include media-breakpoint-down(sm) {
+    font-size: .9rem;
+  }
+}
+
+.c-gallery-pages{
+  width: 100%;
+  text-align: center;
+  font-family:Play, sans-serif;
+  a{
+    color: black;
+    padding: 5px 20px;
+  }
+}

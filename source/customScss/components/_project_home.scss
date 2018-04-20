@@ -1,0 +1,73 @@
+.c-project{
+  position: relative;
+}
+
+.c-project-box{
+  div{
+    padding: 0 0;
+  }
+}
+
+.c-project-text{
+  color: black;
+  position: absolute;
+  top: 50%;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  text-shadow: 0 0 1px black;
+  z-index: 1000;
+  transform: translateY(-50%);
+  p {
+      font-size: 1.2rem;
+      @include media-breakpoint-down(sm) {
+        font-size: .5rem;
+      }
+      @include media-breakpoint-down(md) {
+        font-size: 1rem;
+      }
+    }
+    h4{
+        font-size: 1.5rem;
+        @include media-breakpoint-down(sm){
+          font-size: .7rem;
+        }
+        @include media-breakpoint-down(md){
+          font-size: 1.2rem;
+        }
+      }
+}
+
+.c-project-left{
+  cursor: pointer;
+  margin: 0 auto;
+  padding: 0 0 ;
+  position: relative;
+  &:after{
+    @include bg-overlay($c-gray-200,.5);
+  }
+}
+
+.c-project-right{
+  padding: 0 0;
+  margin: 0 auto;
+}
+.c-project-right-image{
+  margin: 0 auto;
+  padding: 0 0;
+  .c-project-text{
+    display: none;
+  }
+  &:hover{
+    .c-project-text{
+      display: block;
+      color: black;
+    }
+    img{
+      opacity: .5;
+    }
+  }
+  &:last-child{
+    margin-top: 10px;
+  }
+}

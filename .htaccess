@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteRule index index.php
+RewriteRule start home.php
+RewriteRule kontakt contact.php

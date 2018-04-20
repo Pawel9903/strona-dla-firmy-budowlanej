@@ -1,0 +1,86 @@
+@mixin c-active-service{
+  background-color: $gray-300;
+  i, span{
+    color: $c-primary !important;
+    text-shadow: 0 0 10px black;
+    font-weight: bold;
+  }
+  text-decoration: none;
+  @include relative-zindex();
+}
+
+
+.c-item-services{
+  font-family:Play, sans-serif;
+  cursor: pointer;
+  padding: 20px 0;
+  pointer-events: none;
+  &:hover {
+    @include c-active-service;
+    transition: all .25s ease-in-out;
+  }
+  a{
+    text-decoration: none;
+    pointer-events: auto;
+  }
+}
+
+
+.c-icon-services{
+  font-size: 2em;
+  color: $c-gray-600;
+  @include media-breakpoint-up(md){
+    font-size: 5rem;
+  }
+}
+
+.c-description-services{
+  color: $c-gray-600;
+  font-size: .65rem;
+  text-decoration: none;
+  @include media-breakpoint-up(md){
+    font-size: 1rem;
+  }
+}
+
+.c-content-services{
+  position: relative;
+  background-color: $light;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.c-active-services{
+  @include c-active-service;
+  background-color: $c-gray-600;
+  margin: 0 0;
+}
+
+.service-image{
+  padding: 2px;
+  background-color: black;
+}
+
+.service2, .service3{
+  padding: 30px 15px;
+  display: none;
+}
+
+.service2, .service3, .service1 {
+  padding: 30px 15px;
+  @include media-breakpoint-down(sm) {
+    font-size: .8rem;
+  }
+  p{
+    padding: 15px 0;
+  }
+}
+
+.service{
+  img{
+    box-shadow: -10px -10px 5px $c-gray-800;
+  }
+  h5{
+    font-family:Play, sans-serif;
+  }
+}

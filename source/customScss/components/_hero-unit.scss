@@ -1,0 +1,29 @@
+.c-hero{
+  margin-bottom: 0;
+  position: relative;
+  background-size: cover;
+  &:after{
+    @include bg-overlay($c-black, .5);
+  }
+}
+
+.c-subhero{
+  opacity: 1;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 1.5px rgba($c-black, 1));
+}
+
+.c-hero-content{
+  font-family:Play, sans-serif;
+  @include relative-zindex();
+}
+
+.c-texthero{
+  text-shadow: 0 2px 0 rgba($c-black, 1);
+  @include media-breakpoint-up(md){
+    font-size: 2.5rem;
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: 1.5rem;
+  }
+}

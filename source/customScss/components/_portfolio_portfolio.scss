@@ -1,0 +1,52 @@
+.c-portfolio{
+  margin: 20px auto;
+}
+
+.c-portfolio-item {
+  position: relative;
+  height: 250px;
+  width: 350px;
+  &:hover {
+    .c-portfolio-text {
+      display: block;
+      color: black;
+    }
+    .c-portfolio-img {
+      opacity: .5;
+    }
+    img {
+      opacity: .5;
+    }
+  }
+}
+
+.c-portfolio-text {
+  display: none;
+  color: black;
+  position: absolute;
+  top: 50%;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  text-shadow: 0 0 1px black;
+  z-index: 1000;
+  transform: translateY(-50%);
+  p {
+    font-size: 1.2rem;
+    @include media-breakpoint-down(sm) {
+      font-size: .5rem;
+    }
+    @include media-breakpoint-down(md) {
+      font-size: 1rem;
+    }
+  }
+  h4 {
+    font-size: 1.5rem;
+    @include media-breakpoint-down(sm) {
+      font-size: .7rem;
+    }
+    @include media-breakpoint-down(md) {
+      font-size: 1.2rem;
+    }
+  }
+}
